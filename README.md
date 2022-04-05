@@ -15,11 +15,8 @@ or
 After executing commands, an extension file should appear in ./web-ext-artifacts/trufflehog-{Version number}.zip 
 To install an extension from a file, switch `xpinstall.signatures.required parameter` to `false` in Firefox on `about:config` page.
 
-## AWS keys
-AWS has a rich API and sadely you may have to test a bunch of commands. List buckets might be a good start https://docs.aws.amazon.com/cli/latest/reference/s3api/list-buckets.html
-
-## Slack webhook keys
-These are a problem almost always, see https://cybersecurity.att.com/blogs/labs-research/slack-phishing-attacks-using-webhooks
+## keyhacks Project:
+[keyhacks Project on Github](https://github.com/streaak/keyhacks)
 
 ## Algelia
 These keys have access controls, a typical public key should not have access to the usage API, otherwise it could be an issue:
@@ -39,6 +36,10 @@ curl -u API_Key:${KEY} 'https://amplitude.com/api/2/export?start=20150201T5&end=
 <html><title>403: Forbidden</title><body>403: Forbidden</body></html>%
 ```
 
+## AWS keys
+AWS has a rich API and sadly you may have to test a bunch of commands.
+List buckets might be a good start https://docs.aws.amazon.com/cli/latest/reference/s3api/list-buckets.html
+
 ## Bugsnag API
 You should not be able to pull the orginization name
 ```
@@ -57,3 +58,6 @@ These keys also follow the same format for many other API's such as gmail/drive/
 JWT's are interesting not just because they go to API's, but also because you can crack their secret in hashcat if they're alg `hs`
 you can decode them here to figure out their algorithm https://jwt.io/
 and you can crack them here https://hashcat.net/wiki/doku.php?id=example_hashes with flag `-m 16500`
+
+## Slack webhook keys
+These are a problem almost always, see https://cybersecurity.att.com/blogs/labs-research/slack-phishing-attacks-using-webhooks

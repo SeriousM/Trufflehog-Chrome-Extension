@@ -1,6 +1,6 @@
 {
   "name": "Trufflehog",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "manifest_version": 2,
   "description": "Sniffing out credentials",
   "homepage_url": "https://trufflesecurity.com",
@@ -28,13 +28,20 @@
       "strict_min_version": "57.0"
     }
   },
-  "icons": { "16": "icon16.png",
-           "48": "icon48.png",
-          "128": "icon128.png" },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   "content_scripts": [
-		{
-		 "matches": ["https://*/*","http://*/*"],
-		 "js": ["inject.js"]
-		}
-	]
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ]
 }
